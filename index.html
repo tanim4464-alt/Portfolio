@@ -6,27 +6,9 @@
     <title>Tanim Ahmmod | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* PDF Viewer Container CSS */
-        .pdf-viewer-container {
-            position: relative;
-            width: 100%;
-            /* 
-              হাইট হিসাব করার নিয়ম (প্রতি পেজের জন্য আনুমানিক ১১৫০px থেকে ১২০০px):
-              - ১ পেজের সিভি হলে: height: 1150px;
-              - ২ পেজের সিভি হলে: height: 2300px;
-              - ৩ পেজের সিভি হলে: height: 3450px;
-            */
-            height: 2300px; /* <--- আপনার সিভির পেজ সংখ্যা অনুযায়ী এই মানটি পরিবর্তন করুন */
-            overflow: hidden;
-        }
-        .pdf-iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-            overflow: hidden;
-        }
-    </style>
+    
+    <!-- PDF.js Library for Rendering All Pages Automatically -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased">
     <!-- Navigation Bar -->
@@ -71,10 +53,10 @@
                     Over the course of my academic journey, I have actively worked on machine learning architectures, deep learning models, and embedded systems hardware. I enjoy tackling complex engineering problems, analyzing physiological signals, and writing reproducible computational algorithms.
                 </p>
 
-                <!-- Action Buttons: Open in Browser & Direct Download -->
+                <!-- Action Buttons -->
                 <div class="pt-4 flex flex-wrap gap-4">
                     <a href="cv.pdf" target="_blank" class="bg-teal-700 hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-lg shadow transition inline-flex items-center gap-2">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open CV in New Tab
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Original PDF
                     </a>
                     <a href="cv.pdf" download class="border border-slate-300 hover:border-teal-600 text-slate-700 font-bold px-6 py-3 rounded-lg transition inline-flex items-center gap-2">
                         <i class="fa-solid fa-file-arrow-down"></i> Download Resume / CV
@@ -90,7 +72,7 @@
             </div>
         </section>
 
-        <!-- Borderline Section Header for Curriculum Vitae -->
+        <!-- Borderline Section Header -->
         <div class="relative my-12">
             <div class="absolute inset-0 flex items-center" aria-hidden="true">
                 <div class="w-full border-t border-slate-300"></div>
@@ -100,18 +82,56 @@
             </div>
         </div>
 
-        <!-- Embedded CV Document Section -->
-        <section class="w-full max-w-4xl mx-auto shadow-sm border border-slate-200 rounded-lg overflow-hidden bg-white">
-            <div class="pdf-viewer-container">
-                <iframe 
-                    src="cv.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" 
-                    class="pdf-iframe" 
-                    scrolling="no"
-                    title="Tanim Ahmmod CV">
-                </iframe>
-            </div>
+        <!-- Attached Seamless Multi-Page CV Container -->
+        <section class="w-full max-w-4xl mx-auto space-y-6" id="pdf-container">
+            <!-- JavaScript will render all N-pages automatically here -->
         </section>
 
     </main>
+
+    <!-- PDF Rendering Script -->
+    <script>
+        const url = 'cv.pdf'; // Path to your CV PDF file
+
+        // Set worker path for PDF.js
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        // Fetch PDF and render all pages
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            const container = document.getElementById('pdf-container');
+            
+            // Loop through each page from 1 to N
+            for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                pdf.getPage(pageNum).then(page => {
+                    const scale = 2; // Higher scale for sharp crisp text quality
+                    const viewport = page.getViewport({ scale: scale });
+
+                    // Create Wrapper Element for each page
+                    const pageWrapper = document.createElement('div');
+                    pageWrapper.className = 'bg-white shadow-sm border border-slate-200 rounded-lg overflow-hidden flex justify-center';
+
+                    // Create Canvas Element
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    canvas.style.width = '100%';
+                    canvas.style.height = 'auto';
+
+                    pageWrapper.appendChild(canvas);
+                    container.appendChild(pageWrapper);
+
+                    // Render page on canvas
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext);
+                });
+            }
+        }).catch(error => {
+            console.error('Error rendering PDF:', error);
+        });
+    </script>
 </body>
 </html>
