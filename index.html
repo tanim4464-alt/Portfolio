@@ -7,12 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* HD PDF Container - Smooth & Attached Feel */
-        .pdf-hd-container {
+        /* PDF Viewer Container CSS */
+        .pdf-viewer-container {
+            position: relative;
             width: 100%;
-            height: 1100px; /* আপনার সিভির মোট পেজ অনুযায়ী হাইট অ্যাডজাস্ট করতে পারেন (যেমন: ২ পেজের জন্য ১০০০px-১২০০px) */
-            border: none;
+            height: 1150px; /* Adjust height based on your CV length */
             overflow: hidden;
+        }
+        .pdf-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
@@ -59,10 +64,10 @@
                     Over the course of my academic journey, I have actively worked on machine learning architectures, deep learning models, and embedded systems hardware. I enjoy tackling complex engineering problems, analyzing physiological signals, and writing reproducible computational algorithms.
                 </p>
 
-                <!-- Action Buttons -->
+                <!-- Action Buttons: Open in Browser & Direct Download -->
                 <div class="pt-4 flex flex-wrap gap-4">
                     <a href="cv.pdf" target="_blank" class="bg-teal-700 hover:bg-teal-800 text-white font-bold px-6 py-3 rounded-lg shadow transition inline-flex items-center gap-2">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Original PDF
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Open CV in New Tab
                     </a>
                     <a href="cv.pdf" download class="border border-slate-300 hover:border-teal-600 text-slate-700 font-bold px-6 py-3 rounded-lg transition inline-flex items-center gap-2">
                         <i class="fa-solid fa-file-arrow-down"></i> Download Resume / CV
@@ -78,7 +83,7 @@
             </div>
         </section>
 
-        <!-- Borderline Section Header -->
+        <!-- Borderline Section Header for Curriculum Vitae -->
         <div class="relative my-12">
             <div class="absolute inset-0 flex items-center" aria-hidden="true">
                 <div class="w-full border-t border-slate-300"></div>
@@ -88,16 +93,15 @@
             </div>
         </div>
 
-        <!-- Attached HD Crisp CV Container (Native Vector PDF Rendering) -->
+        <!-- Embedded CV Document Section -->
         <section class="w-full max-w-4xl mx-auto shadow-sm border border-slate-200 rounded-lg overflow-hidden bg-white">
-            <object 
-                data="cv.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" 
-                type="application/pdf" 
-                class="pdf-hd-container">
-                <p class="p-4 text-center text-slate-600">
-                    Your browser does not support inline PDFs. <a href="cv.pdf" class="text-teal-600 underline">Click here to view the PDF</a>.
-                </p>
-            </object>
+            <div class="pdf-viewer-container">
+                <iframe 
+                    src="cv.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+                    class="pdf-iframe" 
+                    title="Tanim Ahmmod CV">
+                </iframe>
+            </div>
         </section>
 
     </main>
