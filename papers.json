@@ -14,7 +14,7 @@
     "statusText": "Under Review",
     "venue": "IEEE Transactions on Human-Machine Systems",
     "year": "2026",
-    "image": "research_files/proposed architecture.png",
+    "image": "proposed architecture.png",
     "description": "Proposes an efficient and integrated framework using a teacher-student knowledge distillation approach (EfficientNet-B7 teacher to lightweight CNN student) combined with hybrid feature fusion for automated Bundle Branch Block (BBB) detection from 4-lead ECGs across multi-datasets.",
     "keywords": ["ECG Analysis", "Knowledge Distillation", "Bundle Branch Block", "Deep Learning", "Thesis Book"],
     "links": [
