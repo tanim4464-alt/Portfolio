@@ -14,7 +14,7 @@
     "statusText": "Under Review",
     "venue": "IEEE Transactions on Human-Machine Systems",
     "year": "2026",
-    "image": "proposed architecture.png",
+    "image": "research_files/proposed architecture.png",
     "description": "Proposes an efficient and integrated framework using a teacher-student knowledge distillation approach (EfficientNet-B7 teacher to lightweight CNN student) combined with hybrid feature fusion for automated Bundle Branch Block (BBB) detection from 4-lead ECGs across multi-datasets.",
     "keywords": ["ECG Analysis", "Knowledge Distillation", "Bundle Branch Block", "Deep Learning", "Thesis Book"],
     "links": [
@@ -66,7 +66,7 @@
     "statusText": "Accepted",
     "venue": "SPICSCON 2026",
     "year": "2026",
-    "image": "proposed architecture.png",
+    "image": "research_files/proposed architecture.png",
     "description": "Proposes a three-stage hierarchical cross-data ensemble framework combining ML, DL, SSL, and biomedical PLMs for accurate cardiovascular disease prediction.",
     "keywords": ["Ensemble Learning", "Heart Disease", "Biomedical PLMs", "Deep Learning"],
     "links": [
@@ -132,7 +132,7 @@
     "statusText": "Under Review",
     "venue": "ICCIT 2026 (IEEE Xplore)",
     "year": "2026",
-    "image": "proposed architecture.png",
+    "image": "research_files/proposed architecture.png",
     "description": "Introduces a point-supervised, cross-conditioned cascade framework that jointly predicts brain tumor type and imaging modality with spatially grounded attention supervision.",
     "keywords": ["Brain MRI", "Deep Learning", "Explainable AI", "Tumor Classification"],
     "links": [
