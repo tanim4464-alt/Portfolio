@@ -485,22 +485,7 @@ h1, h2, h3, h4 {
     margin-bottom: 15px;
 }
 
-/* Achievements */
-.achievement-card {
-    background: white;
-    padding: 25px;
-    border-radius: 12px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-}
 
-.achieve-icon {
-    font-size: 2.5rem;
-    color: #eab308;
-}
 
 /* Contact */
 .contact-subtitle {
@@ -1844,4 +1829,42 @@ footer {
 }
 
 
+/* Achievements & Memberships Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* পাশাপাশি ২টি করে কার্ড থাকবে */
+    gap: 20px; /* কার্ডের মাঝের গ্যাপ */
+}
+
+.achievement-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+/* Gold / Yellow Icon */
+.achieve-icon {
+    font-size: 2.5rem;
+    color: #eab308;
+    flex-shrink: 0;
+}
+
+/* Blue Icon */
+.achieve-icon2 {
+    font-size: 2.5rem;
+    color: #0875ea;
+    flex-shrink: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: 1fr; /* ছোট স্ক্রিনে ১টি করে দেখাবে */
+    }
+}
 

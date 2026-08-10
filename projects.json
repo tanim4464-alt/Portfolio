@@ -1,0 +1,24 @@
+[
+  {
+    "id": "01",
+    "title": "Multi Signal Database",
+    "icon": "fas fa-database",
+    "eventBadge": "RUET TechnoFair",
+    "year": "2025",
+    "submissionInfo": "RUET TechnoFair & Research Showcase",
+    "description": "A deep-learning powered embedded software designed to analyze multi-channel ECG signals, automatically detecting arrhythmias with high precision using PyTorch framework.",
+    "tags": ["Python", "PyTorch", "Signal Processing"],
+    "image": "project-image-1.jpg"
+  },
+  {
+    "id": "02",
+    "title": "Iontophoresis",
+    "icon": "fas fa-bolt",
+    "eventBadge": "RUET Capstone",
+    "year": "2024",
+    "submissionInfo": "RUET Capstone 1, Dept. of EEE, RUET",
+    "description": "An automated and safe medical device designed for non-invasive transdermal drug delivery using iontophoresis technique with precision control.",
+    "tags": ["Embedded Systems", "Circuit Design", "Medical Device"],
+    "image": "project-image-2.jpg"
+  }
+]
