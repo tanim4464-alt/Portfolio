@@ -1,0 +1,25 @@
+[
+  {
+    "id": "01",
+    "title": "Siliconova Ltd.",
+    "icon": "fas fa-microchip",
+    "eventBadge": "Mirpur, Dhaka, bangladesh",
+    "year": "2025",
+    "duration": "March 02, 2025 – March 07, 2025",
+    "description": "Completed a professional industrial attachment focusing on core VLSI design, semiconductor chip manufacturing workflows, and micro-architecture fundamentals. Hands-on exploration included processor building concepts and hardware simulation pipelines.",
+    "tags": ["VLSI Design", "Chip Architecture", "Hardware Simulation"],
+    "image": "attachment/siliconova.png"
+  },
+
+  {
+    "id": "02",
+    "title": "Energypack Engineering Ltd.",
+    "icon": "fas fa-bolt",
+    "eventBadge": "Bogura, Bangladesh",
+    "year": "2023",
+    "duration": "December 13, 2023",
+    "description": "Participated in an industrial tour at Energypack Engineering Ltd. in Bogura, Bangladesh. Observed manufacturing, assembly, and testing processes of electrical power equipment, including power transformers (transformer), busbars (busbar), and substation components.",
+    "tags": ["Power Systems", "Transformer Manufacturing", "Substation Equipment", "Industrial Tour"],
+    "image": ""
+  }
+]
