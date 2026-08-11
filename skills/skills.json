@@ -1,0 +1,48 @@
+[
+  {
+    "type": "tags",
+    "category": "Programming Languages",
+    "icon": "fas fa-code",
+    "cardClass": "skill-card",
+    "items": ["Python", "Matlab", "C", "C++", "html"]
+  },
+  {
+    "type": "tags",
+    "category": "Python Libraries",
+    "icon": "fas fa-cubes",
+    "cardClass": "skill-card",
+    "items": ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn", "TensorFlow", "PyTorch"]
+  },
+  {
+    "type": "tags",
+    "category": "Development Tools",
+    "icon": "fas fa-tools",
+    "cardClass": "skill-card",
+    "items": ["MATLAB", "EasyEDA", "Arduino IDE", "Kaggle"]
+  },
+  {
+    "type": "tags",
+    "category": "Hardware Platforms",
+    "icon": "fas fa-microchip",
+    "cardClass": "skill-card",
+    "items": ["Shimmer ECG PPG GRE Unit", "Arduino", "Multi Sensors"]
+  },
+  {
+    "type": "tags",
+    "category": "Design & Writing",
+    "icon": "fas fa-pen-nib",
+    "cardClass": "skill-card",
+    "items": ["Canva", "LaTeX", "MS Word"]
+  },
+  {
+    "type": "list",
+    "category": "Research & Leadership",
+    "icon": "fas fa-user-tie",
+    "cardClass": "skill-card accent-card",
+    "items": [
+      { "icon": "fas fa-star", "text": "1st Author: 3 Conferences" },
+      { "icon": "fas fa-star", "text": "1st Author: 2 Journals" },
+      { "icon": "fas fa-chalkboard-teacher", "text": "Attended 3 Conferences" }
+    ]
+  }
+]
