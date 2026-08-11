@@ -46,7 +46,7 @@ h1, h2, h3, h4 {
 .section-title {
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     position: relative;
     font-weight: 700;
 }
@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
     font-weight: 600;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .hero-section h1 {
@@ -170,20 +170,12 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-.about-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
 
-.about-content p {
-    color: var(--text-muted);
-    margin-bottom: 15px;
-}
 
 .about-highlights {
     display: flex;
     gap: 20px;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
 .highlight-card {
@@ -277,14 +269,22 @@ h1, h2, h3, h4 {
     box-shadow: var(--shadow);
 }
 
+/* Header design to align icon & title side-by-side */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* আইকন ও লেখার মধ্যবর্তী দূরত্ব */
+    margin-bottom: 15px; /* নিচের ট্যাগ বা লিস্টের সাথে দূরত্ব */
+}
+
 .skill-icon {
     font-size: 1.5rem;
     color: var(--primary-color);
-    margin-bottom: 15px;
+    margin-bottom: 0; /* গ্যাপ সরানোর জন্য ০ করা হয়েছে */
 }
 
 .skill-card h3 {
-    margin-bottom: 15px;
+    margin-bottom: 0; /* গ্যাপ সরানোর জন্য ০ করা হয়েছে */
     font-size: 1.1rem;
 }
 
@@ -319,7 +319,6 @@ h1, h2, h3, h4 {
     background: #eff6ff;
     border-color: #bfdbfe;
 }
-
 /* Research Section & Accordions */
 .stats-container {
     display: flex;
@@ -327,7 +326,7 @@ h1, h2, h3, h4 {
     background: white;
     padding: 25px;
     border-radius: 12px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: var(--shadow);
 }
 
@@ -350,7 +349,7 @@ h1, h2, h3, h4 {
 .paper-card {
     background: white;
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: 1px solid var(--border-color);
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -485,13 +484,29 @@ h1, h2, h3, h4 {
     margin-bottom: 15px;
 }
 
+/* ছবির কন্টেইনার ফিক্স */
+.project-image-box {
+    width: 100%;
+    max-width: 400px; /* আপনার প্রয়োজন অনুযায়ী অ্যাডজাস্ট করতে পারেন */
+    height: 250px;    /* নির্দিষ্ট হাইট সেট করুন */
+    overflow: hidden;
+    border-radius: 8px; /* অপশনাল: কোণাগুলো স্মুথ করার জন্য */
+}
 
+/* আসল ইমেজ ফিক্স */
+.project-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ছবি পুরোপুরি দেখাবে, কাটবে না (aspect ratio ঠিক থাকবে) */
+    object-position: center; /* ছবিকে মাঝে এলাইন করবে */
+    display: block;
+}
 
 /* Contact */
 .contact-subtitle {
     text-align: center;
     color: var(--text-muted);
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .contact-grid {
@@ -499,7 +514,7 @@ h1, h2, h3, h4 {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .contact-item i {
@@ -630,11 +645,7 @@ footer {
     width: 100%;            /* কার্ডগুলো যেন পুরো কলাম জুড়ে থাকে */
 }
 
-.about-content p {
-    text-align: justify;
-    line-height: 1.8; /* লাইনের মাঝের গ্যাপ বাড়ালে জাস্টিফাই করা লেখা পড়তে আরও সুবিধা হয় */
-    margin-bottom: 15px; /* প্রতিটি প্যারাগ্রাফের মাঝে একটু স্পেস তৈরি করবে */
-}
+
 
 .paper-details {
     max-height: 0;
@@ -1319,7 +1330,7 @@ footer {
     grid-template-columns: 1.2fr 1fr;
     gap: 30px;
     align-items: start;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /* Left Contact Details */
@@ -1464,7 +1475,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .stat-highlight {
@@ -1632,7 +1643,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .breakdown-card {
@@ -1800,7 +1811,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     box-shadow: var(--shadow);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -1868,3 +1879,124 @@ footer {
     }
 }
 
+/* Header Center Alignment */
+h3.middle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: -20px;
+}
+
+/* Supervisor Card Custom Adjustments */
+.supervisor-card {
+    cursor: default; /* accordion click effect off for this card */
+}
+
+.supervisor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.supervisor-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.supervisor-rank {
+    margin: 3px 0 0 0;
+    font-size: 0.85rem;
+    color: #666; /* Light theme adjust / theme dynamic */
+}
+
+/* Profile Button Style */
+.profile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #007bff; /* Primary theme color */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.profile-btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.profile-btn i {
+    font-size: 0.75rem;
+}
+.paper-inner img {
+    width: 100% !important;       
+    height: auto !important;     
+    display: block;
+    object-fit: contain;
+}
+
+
+@media (min-width: 768px) {
+    .paper-inner img {
+        height: 300px !important;   
+        width: auto !important;    
+        max-height: none !important;
+    }
+}
+
+/*about section*/
+.about-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    color: var(--text-muted);
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* কাস্টম পয়েন্ট সাইন/বুলেট স্টাইলিং */
+.about-content .about-list {
+    list-style: none; /* ডিফল্ট ডট তুলে দেওয়া হয়েছে */
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.about-content .about-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    color: var(--text-muted); 
+    text-align: justify;
+    line-height: 1.7;
+}
+
+.about-content .about-list li::before {
+    content: "◈"; /* এখানে ◆, ▸, বা ◈ ব্যবহার করতে পারেন */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary-color, #007bff); /* সাইটের প্রাইমারি কালার */
+    font-size: 0.85rem;
+}
+.about-content .about-list li strong {
+    color: var(--text-main, #64748b); /* মূল বোল্ড টেক্সট কালার */
+}
+
+@media (max-width: 768px) {
+    .about-content p,
+    .about-content .about-list li {
+        text-align: justify; /* মোবাইল ভিউতেও জাস্টিফাই নিশ্চিত করবে */
+        -webkit-text-align-last: left; /* শেষ লাইনটি যেন বাম পাশে সুন্দরভাবে শেষ হয় */
+        text-align-last: left;
+    }
+}
