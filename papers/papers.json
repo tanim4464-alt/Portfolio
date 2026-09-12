@@ -20,6 +20,29 @@
     "links": []
   },
 
+  {
+  "type": "journal",
+  "paperTypeLabel": "Journal Paper",
+  "title": "Empirically-Driven Machine Learning with Aftershock Decay Optimization: A Generalized Approach for Accurate Ground Vibration Forecasting",
+  "authorPosition": "Co-1st",
+  "library": "Springer",
+  "authors": [
+    { "name": "Arnob Deb", "isPrimary": true, "isCoFirst": true },
+    { "name": "Tanim Ahmmod", "isPrimary": true, "isCoFirst": true },
+    { "name": "P. Roy", "isPrimary": false, "isCoFirst": false },
+    { "name": "P. P. C. Awishi", "isPrimary": false, "isCoFirst": false },
+    { "name": "Mohammod Abdul Motin", "isPrimary": false, "isCoFirst": false },
+    { "name": "A. Dash", "isPrimary": false, "isCoFirst": false }
+  ],
+  "status": "under_review",
+  "statusText": "Under Review",
+  "venue": "Engineering with Computers (Springer Nature)",
+  "year": "2026",
+  "image": "",
+  "description": "Uses empirical equations as engineered features for machine learning models and introduces Aftershock Decay Optimization (ADO), a novel and efficient optimization approach for accurate ground vibration forecasting.",
+  "keywords": ["Machine Learning", "Empirical Equations", "Aftershock Decay Optimization", "Ground Vibration Forecasting"],
+  "links": []
+},
 
   {
     "type": "conference",
