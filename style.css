@@ -2000,3 +2000,15 @@ h3.middle {
         text-align-last: left;
     }
 }
+
+/* For mobile phones and small screens */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto; /* Remove full-screen height */
+        padding: 40px 16px; /* Reduce top and bottom space */
+    }
+
+    .hero-visual {
+        display: none; /* Hide the big research orb and cards on mobile to save space */
+    }
+}
