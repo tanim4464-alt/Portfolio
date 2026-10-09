@@ -2001,25 +2001,4 @@ h3.middle {
     }
 }
 
-/* Hero Section */
-.hero-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 120px 20px 60px 20px;
-    background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-}
 
-/* Fix for mobile screens so About and Academic show on first look */
-@media (max-width: 768px) {
-    .hero-section {
-        min-height: auto; /* Removes full screen lock on mobile */
-        padding: 80px 20px 40px 20px; /* Reduces spacing */
-    }
-}
-    .hero-visual {
-        display: none; /* Hide the big research orb and cards on mobile to save space */
-    }
-}
