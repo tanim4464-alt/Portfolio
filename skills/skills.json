@@ -41,7 +41,7 @@
     "cardClass": "skill-card accent-card",
     "items": [
       { "icon": "fas fa-star", "text": "1st Author: 3 Conferences" },
-      { "icon": "fas fa-star", "text": "1st Author: 2 Journals" },
+      { "icon": "fas fa-star", "text": "1st Author: 1 Journals" },
       { "icon": "fas fa-chalkboard-teacher", "text": "Attended 3 Conferences" }
     ]
   }
